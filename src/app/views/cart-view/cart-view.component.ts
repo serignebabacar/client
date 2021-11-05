@@ -11,10 +11,7 @@ export class CartViewComponent implements OnInit {
     constructor(public store : StoreService) { }
 
     ngOnInit(): void {
-   //     this.store.loadOrders()
-     //   .subscribe(val=>{
-            
-       // });
+  
     }
 
 }

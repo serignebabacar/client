@@ -24,13 +24,6 @@ export class StoreService {
                 return;
             }));
     }
-    //loadOrders():Observable<void>{
-      //  return this.http.get<[]>(environment.apiUrl+"api/orders")
-        //        .pipe(map(data=>{
-          //          this.orders = data;
-            //        return;
-              //  }));
-  //  }
     addToOrder(product:Product){
         let item:  any;
         item = this.order.items.find(p=>p.productId === product.id);
