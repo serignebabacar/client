@@ -1,0 +1,15 @@
+<div class="row">
+    <div  *ngFor="let item of storeService.products" class="col-md-4">
+        <div class="border bg-light rounded p-1">
+            <img src="/assets/img/{{item.artId}}.jpg" class="img-fluid product-image" alt="{{item.artist}}" />
+            <h5>{{item.category}} - {{item.size}}</h5>
+            <ul class="products-props">
+                <li>Price: {{item.price|currency}}</li>
+                <li>Artist: {{item.artist}}</li>
+                <li>Title: {{item.title}}</li>                        
+                <li>Description: {{item.artDescription}}</li>
+            </ul>
+            <button id="buyButton" class="btn btn-success" (click)="storeService.addToOrder(item)">Buy</button>
+        </div>
+    </div>
+</div>
